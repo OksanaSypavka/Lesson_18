@@ -92,13 +92,17 @@ body {
 
 /*Main block Section1 */
 .main-block {
+   position: relative;
    padding-top: 128px;
    padding-bottom: 74px;
    background: linear-gradient(55.95deg, hsl(2, 100%, 61%, 0.2) 0%, hsl(22, 96%, 49%, 0.2) 100%);
    margin-bottom: 184px;
 }
 
-
+.main-block__container {
+   position: relative;
+   z-index: 2;
+}
 
 .main-block__body {
    margin-bottom: 189px;
@@ -237,6 +241,67 @@ body {
 /*Decor*/
 
 /*========================*/
+.decor-main {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+}
+
+.decor-main__item {
+   position: absolute;
+}
+
+.decor-main__item--1 {
+   background: url(../img/1.svg) 0 0 no-repeat;
+   width: 96px;
+   height: 96px;
+   top: 12%;
+   left: 4.5%;
+}
+
+.decor-main__item--2 {
+   background: url(../img/2.svg) 0 0 no-repeat;
+   width: 284px;
+   height: 284px;
+   bottom: -9%;
+   left: -5.5%;
+}
+
+.decor-main__item--3 {
+   background: url(../img/3.svg) 0 0 no-repeat;
+   width: 88px;
+   height: 47px;
+   top: 45%;
+   left: 40%;
+}
+
+.decor-main__item--4 {
+   background: url(../img/4.svg) 0 0 no-repeat;
+   width: 61px;
+   height: 61px;
+   bottom: 24%;
+   left: 38%;
+}
+
+.decor-main__item--5 {
+   background: url(../img/1.svg) 0 0 no-repeat;
+   width: 96px;
+   height: 96px;
+   top: -1.5%;
+   right: 4%;
+   transform: rotate(135deg);
+}
+
+.decor-main__item--6 {
+   background: url(../img/5.svg) 0 0 no-repeat;
+   width: 187px;
+   height: 137px;
+   bottom: 18%;
+   right: -1.5%;
+
+}
 
 
 /*Section 2*/
@@ -256,6 +321,8 @@ body {
 
 .body-main__img {
    max-width: 100%;
+
+   border-radius: 4px;
 }
 
 
@@ -280,13 +347,20 @@ body {
 }
 
 .content-page__list__item {
-   margin-bottom: 12px;
+
    padding-left: 32px;
    background: url(../img/check.svg) 0 5px no-repeat;
-
    line-height: 160%;
    color: #424551;
+
+
 }
+
+.content-page__list__item:not(:last-child) {
+   margin-bottom: 12px;
+}
+
+
 
 .body-about__image img {
    max-width: 100%;
@@ -350,8 +424,6 @@ body {
    height: 100%;
    object-fit: cover;
    object-position: top;
-   transition: transform 0.3s ease;
-
 }
 
 .cards-box__description {
